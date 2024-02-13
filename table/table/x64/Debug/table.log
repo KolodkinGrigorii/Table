@@ -1,0 +1,4 @@
+﻿  source.cpp
+C:\Users\Григорий\source\repos\table\table\table.h(18): warning C4172: возвращение адреса локальной или временной переменной : iter
+C:\Users\Григорий\source\repos\table\table\table.h(52): warning C4715: Table<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,std::basic_string<char,std::char_traits<char>,std::allocator<char> > >::operator[]: значение возвращается не при всех путях выполнения
+  table.vcxproj -> C:\Users\Григорий\source\repos\table\x64\Debug\table.exe
