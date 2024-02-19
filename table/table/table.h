@@ -7,17 +7,8 @@ class Table {
 private:
 	vector<pair<TypeKey, TypeData>> ar;
 public:
-	auto& insert(const TypeKey& key, const TypeData& data) {
+	auto insert(const TypeKey& key, const TypeData& data) {
 		ar.push_back(make_pair(key, data));
-		auto iter=ar.begin();
-		for (auto it = ar.begin(); it != ar.end(); it++) {
-			if (it->first == key) {
-				iter = it;
-			}
-		}
-		return iter;
-	}
-	auto& find(const TypeKey& key) {
 		auto iter = ar.begin();
 		for (auto it = ar.begin(); it != ar.end(); it++) {
 			if (it->first == key) {
@@ -26,11 +17,20 @@ public:
 		}
 		return iter;
 	}
-	auto& end() {
+	auto find(const TypeKey& key) {
+		auto iter = ar.begin();
+		for (auto it = ar.begin(); it != ar.end(); it++) {
+			if (it->first == key) {
+				iter = it;
+			}
+		}
+		return iter;
+	}
+	auto end() {
 		auto iter = ar.end();
 		return iter;
 	}
-	auto& begin() {
+	auto begin() {
 		auto iter = ar.begin();
 		return iter;
 	}
@@ -57,4 +57,3 @@ public:
 		return out;
 	}
 };
-
