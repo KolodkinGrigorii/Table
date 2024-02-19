@@ -56,4 +56,26 @@ public:
 		}
 		return out;
 	}
+	void sort() {
+		for (auto it = ar.begin(); it != ar.end(); it++) {
+			for (auto it2 = ar.begin(); it2 != ar.end(); it2++) {
+				if ((it->first) < (it2->first)) {
+					TypeKey key1 = it->first;
+					TypeData data1 = it->second;
+					TypeKey key2 = it2->first;
+					TypeData data2 = it2->second;
+					it->first = key2;
+					it->second = data2;
+					it2->first = key1;
+					it2->second = data1;
+				}
+			}
+		}
+	}
+};
+template <typename TypeKey, typename TypeData>
+class SortTable : public Table<TypeKey, TypeData> {
+private:
+	vector<pair<TypeKey, TypeData>> ar;
+public:
 };
