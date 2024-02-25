@@ -1,4 +1,11 @@
 ﻿  source.cpp
-C:\Users\Григорий\source\repos\table\table\table.h(18): warning C4172: возвращение адреса локальной или временной переменной : iter
-C:\Users\Григорий\source\repos\table\table\table.h(52): warning C4715: Table<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,std::basic_string<char,std::char_traits<char>,std::allocator<char> > >::operator[]: значение возвращается не при всех путях выполнения
-  table.vcxproj -> C:\Users\Григорий\source\repos\table\x64\Debug\table.exe
+C:\Users\Григорий\Table\table\table\table.h(78,14): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+C:\Users\Григорий\Table\table\table\table.h(71,7): message : во время компиляции функции-члена класс шаблон "std::_Vector_iterator<std::_Vector_val<std::_Simple_types<_Ty>>> SortTable<std::string,int>::insert(const TypeKey &,const TypeData &)"
+          with
+          [
+              _Ty=std::pair<std::string,int>,
+              TypeKey=std::string,
+              TypeData=int
+          ]
+C:\Users\Григорий\Table\table\table\source.cpp(5,25): message : выполняется компиляция ссылки на экземпляр класс шаблон функции "SortTable<std::string,int>"
+  table.vcxproj -> C:\Users\Григорий\Table\table\x64\Debug\table.exe
