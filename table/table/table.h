@@ -7,6 +7,35 @@ class Table {
 private:
 	vector<pair<TypeKey, TypeData>> ar;
 public:
+	Table() {
+		vector<pair<TypeKey, TypeData>> ar;
+	}
+	Table(const Table& t) {
+		auto iter = t.ar.begin();
+		for (auto it = t.ar.begin(); it != t.ar.end(); it++) {
+			TypeKey key = it->first;
+			TypeData data = it->second;
+			ar.push_back(make_pair(key, data));
+		}
+	}
+	Table operator = (const TypeKey& t) {
+		while (ar.size() != 0) {
+			ar.pop_back();
+		}
+		auto iter = t.ar.begin();
+		for (auto it = t.ar.begin(); it != t.ar.end(); it++) {
+			TypeKey key = it->first;
+			TypeData data = it->second;
+			ar.push_back(make_pair(key, data));
+		}
+	}
+	~Table() {
+		int size = ar.size();
+		while (size != 0) {
+			ar.pop_back();
+			size = ar.size();
+		}
+	}
 	auto insert(const TypeKey& key, const TypeData& data) {
 		ar.push_back(make_pair(key, data));
 		auto iter = ar.begin();

@@ -1,11 +1,7 @@
 ﻿  source.cpp
-C:\Users\Григорий\Table\table\table\table.h(78,14): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
-C:\Users\Григорий\Table\table\table\table.h(71,7): message : во время компиляции функции-члена класс шаблон "std::_Vector_iterator<std::_Vector_val<std::_Simple_types<_Ty>>> SortTable<std::string,int>::insert(const TypeKey &,const TypeData &)"
-          with
-          [
-              _Ty=std::pair<std::string,int>,
-              TypeKey=std::string,
-              TypeData=int
-          ]
-C:\Users\Григорий\Table\table\table\source.cpp(5,25): message : выполняется компиляция ссылки на экземпляр класс шаблон функции "SortTable<std::string,int>"
+C:\Users\Григорий\Table\table\table\table.h(34,12): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+C:\Users\Григорий\Table\table\table\table.h(33,3): message : во время компиляции функции-члена класс шаблон "Table<int,int>::~Table(void)"
+C:\Users\Григорий\Table\table\table\source.cpp(5,18): message : см. первую ссылку на "Table<int,int>::~Table" в "main"
+C:\Users\Григорий\Table\table\table\source.cpp(5,18): message : выполняется компиляция ссылки на экземпляр класс шаблон функции "Table<int,int>"
+C:\Users\Григорий\Table\table\table\table.h(37,18): warning C4267: =: преобразование из "size_t" в "int"; возможна потеря данных
   table.vcxproj -> C:\Users\Григорий\Table\table\x64\Debug\table.exe
