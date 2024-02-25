@@ -19,21 +19,21 @@ public:
 	}
 	auto find(const TypeKey& key) {
 		if (ar.size() == 0) {
-			throw'FALL';
+			return ar.end();
 		}
 		auto iter = ar.begin();
 		for (auto it = ar.begin(); it != ar.end(); it++) {
 			if (it->first == key) {
 				iter = it;
 			}
-			if (it->first != key && (it == ar.end() -= 1)) {
-				throw 'FALL';
+			if (it->first != key && (it == (ar.end()-= 1))) {
+				return ar.end();
 			}
 		}
 		return iter;
 	}
 	auto end() {
-		auto iter = ar.end();
+		auto iter = ar.end()-=1;
 		return iter;
 	}
 	auto begin() {
@@ -104,7 +104,7 @@ public:
 	auto find(const TypeKey& key) {
 		if (sortar.size() == 0 || key<sortar.begin()->first 
 			|| key> (sortar.end()-=1)->first) {
-			throw 'FALL';
+			return sortar.end();
 		}
 		else {
 			int left = 0;
@@ -128,7 +128,7 @@ public:
 					}
 				}
 				if (sortar[mid].first != key) {
-					throw 'FALL';
+					return sortar.end();
 				}
 				else {
 					pos += mid;
