@@ -1,0 +1,4 @@
+C:/Users/Григорий/Table/build/CMakeFiles/ALL_BUILD.dir
+C:/Users/Григорий/Table/build/CMakeFiles/ZERO_CHECK.dir
+C:/Users/Григорий/Table/build/gtest/CMakeFiles/gtest.dir
+C:/Users/Григорий/Table/build/test/CMakeFiles/test_table.dir
