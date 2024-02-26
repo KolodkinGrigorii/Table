@@ -68,7 +68,7 @@ public:
 		return iter;
 	}
 	auto end() {
-		auto iter = ar.end()-=1;
+		auto iter = ar.end();
 		return iter;
 	}
 	auto begin() {
@@ -103,6 +103,41 @@ class SortTable: public Table<TypeKey,TypeData> {
 private:
 	vector<pair<TypeKey, TypeData>> sortar;
 public:
+        Table() {
+		vector<pair<TypeKey, TypeData>> sortar;
+	}
+	Table(const SortTable& t) {
+		auto iter = t.sortar.begin();
+		for (auto it = t.sortar.begin(); it != t.ar.end(); it++) {
+			TypeKey key = it->first;
+			TypeData data = it->second;
+			sortar.push_back(make_pair(key, data));
+		}
+	}
+	SortTable<TypeKey, TypeData> operator=(const TypeKey& t) {
+		while (sortar.size() != 0) {
+			sortar.pop_back();
+		}
+		auto iter = t.sortar.begin();
+		for (auto it = t.sortar.begin(); it != t.ar.end(); it++) {
+			TypeKey key = it->first;
+			TypeData data = it->second;
+			ar.push_back(make_pair(key, data));
+		}
+		int size = t.sortar.size();
+		while (size != 0) {
+			t.sortar.pop_back();
+			size = t.sortar.size();
+		}
+		return *this;
+	}
+	~SortTable() {
+		int size = sortar.size();
+		while (size != 0) {
+			sortar.pop_back();
+			size = sortar.size();
+		}
+	}
 	auto insert(const TypeKey& key, const TypeData& data) {
 		if (sortar.size() == 0) {
 			sortar.push_back(make_pair(key, data));
@@ -173,7 +208,7 @@ public:
 		}
 	}
 	auto end() {
-		auto iter = sortar.end()-=1;
+		auto iter = sortar.end();
 		return iter;
 	}
 	auto begin() {
