@@ -18,7 +18,7 @@ public:
 			ar.push_back(make_pair(key, data));
 		}
 	}
-	Table operator = (const TypeKey& t) {
+	Table<TypeKey, TypeData> operator=(const TypeKey& t) {
 		while (ar.size() != 0) {
 			ar.pop_back();
 		}
@@ -28,6 +28,12 @@ public:
 			TypeData data = it->second;
 			ar.push_back(make_pair(key, data));
 		}
+		int size = t.ar.size();
+		while (size != 0) {
+			t.ar.pop_back();
+			size = t.ar.size();
+		}
+		return *this;
 	}
 	~Table() {
 		int size = ar.size();

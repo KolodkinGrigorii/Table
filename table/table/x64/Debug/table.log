@@ -1,7 +1,7 @@
 ﻿  source.cpp
-C:\Users\Григорий\Table\table\table\table.h(34,12): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
-C:\Users\Григорий\Table\table\table\table.h(33,3): message : во время компиляции функции-члена класс шаблон "Table<int,int>::~Table(void)"
+C:\Users\Григорий\Table\table\table\table.h(39,12): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+C:\Users\Григорий\Table\table\table\table.h(38,3): message : во время компиляции функции-члена класс шаблон "Table<int,int>::~Table(void)"
 C:\Users\Григорий\Table\table\table\source.cpp(5,18): message : см. первую ссылку на "Table<int,int>::~Table" в "main"
 C:\Users\Григорий\Table\table\table\source.cpp(5,18): message : выполняется компиляция ссылки на экземпляр класс шаблон функции "Table<int,int>"
-C:\Users\Григорий\Table\table\table\table.h(37,18): warning C4267: =: преобразование из "size_t" в "int"; возможна потеря данных
+C:\Users\Григорий\Table\table\table\table.h(42,18): warning C4267: =: преобразование из "size_t" в "int"; возможна потеря данных
   table.vcxproj -> C:\Users\Григорий\Table\table\x64\Debug\table.exe
