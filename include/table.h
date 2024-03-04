@@ -28,11 +28,6 @@ public:
 			TypeData data = it->second;
 			ar.push_back(make_pair(key, data));
 		}
-		int size = t.ar.size();
-		while (size != 0) {
-			t.ar.pop_back();
-			size = t.ar.size();
-		}
 		return *this;
 	}
 	~Table() {
@@ -123,11 +118,6 @@ public:
 			TypeKey key = it->first;
 			TypeData data = it->second;
 			ar.push_back(make_pair(key, data));
-		}
-		int size = t.sortar.size();
-		while (size != 0) {
-			t.sortar.pop_back();
-			size = t.sortar.size();
 		}
 		return *this;
 	}
